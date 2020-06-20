@@ -26,9 +26,8 @@ jobs:
       run: sudo apt-get install git build-essential libsdl1.2-dev texinfo gawk chrpath diffstat python lsb-core wget sudo apt-file
 
     # Runs a set of commands using the runners shell
-    - name: source enviroment
-      run: source setup palmetto
-    
-    - name: start build
-      run: bitbake obmc-phosphor-image
+    - name: source enviroment & build
+      run: |
+        source setup palmetto
+        bitbake obmc-phosphor-image
 
