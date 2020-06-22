@@ -236,3 +236,8 @@ PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
 # track the version of this file when it was generated. This can safely be ignored if
 # this doesn't mean anything to you.
 CONF_VERSION = "1"
+
+SOURCE_MIRROR_URL ?= "http://10.162.243.220/oe-mirror/cobra-xilinx-obmc2.7.0/"
+INHERIT_append = " own-mirrors"
+
+DL_DIR ?= "${HOME}/cobra-xilinx-obmc2.7.0_DL"
